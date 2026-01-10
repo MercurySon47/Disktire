@@ -16,10 +16,37 @@ a.text {
 @media (max-width: 992px) {
   .navbar-expand-lg .menu-cont {
       flex-wrap: nowrap;
-      overflow-x: auto; /* Добавляет горизонтальный скролл если не помещается */
+      /* overflow-x: auto; */
       -webkit-overflow-scrolling: touch;
   }
+  .icon-hover{
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+  }
+  .navbar-brand {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   
+  .telegram-icon {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+  }
+
+  .search-box {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    /* width: 100px !important: */
+  }
+
+
   .menu-cont a.text {
       white-space: nowrap;
   }
@@ -36,8 +63,9 @@ a.text {
   align-items: center;
   justify-content: center;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  padding: 8px;
+  padding: 3px;
   border-radius: 50%;
+  margin-left: 30px;
 }
 
 /* Увеличение при наведении */
