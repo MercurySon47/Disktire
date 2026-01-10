@@ -17,6 +17,28 @@ a.text {
   margin-right: 30px;
 }
 
+.catalog {
+  width: 992px;
+}
+.cart-card {
+  width: 200px;
+  font-size: medium;
+  margin: 10px;
+}
+
+.input-cart-count {
+  width: 150px !important;
+  margin-right: 20px;
+  padding-left: 10px;
+  font-size: 12px !important;
+/* padding-left: 20px !important; */
+}
+
+.input-cart-count-number {
+  padding-left: px !important;
+  text-align: center;
+}
+
 /* .logo_min {
     display: none;
   } */
@@ -77,6 +99,17 @@ a.text {
   .menu-cont a.text {
       white-space: nowrap;
   }
+
+  .catalog {
+  width: 500px;
+}
+
+.input-cart-count {
+  /* width: 100px !important; */
+  margin-right: 0px;
+  padding-left: 0px;
+/* padding-left: 20px !important; */
+}
 }
 
 .btnsearch {
