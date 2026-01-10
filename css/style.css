@@ -17,7 +17,18 @@ a.text {
   margin-right: 30px;
 }
 
-/* Мобильная версия */ 
+/* .logo_min {
+    display: none;
+  } */
+
+/* Мобильная версия */
+@media (min-width: 992px) {
+
+  .logo_min {
+    display: none;
+  }
+
+} 
 
 @media (max-width: 992px) {
   .navbar-expand-lg .menu-cont {
@@ -34,6 +45,10 @@ a.text {
     margin-right: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+
+  .logo {
+    display: none;
   }
   
   .telegram-icon {
