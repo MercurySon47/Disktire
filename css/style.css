@@ -1,0 +1,89 @@
+a.text:active, /* активная/посещенная ссылка */
+a.text:hover,  /* при наведении */
+a.text {
+
+  text-decoration: none;
+  color: #666;
+}
+
+
+/* Для flexbox варианта */
+.menu-cont {
+  gap: 15px; /* Расстояние между элементами */
+}
+
+/* Для предотвращения переноса на мобильных */
+@media (max-width: 992px) {
+  .navbar-expand-lg .menu-cont {
+      flex-wrap: nowrap;
+      overflow-x: auto; /* Добавляет горизонтальный скролл если не помещается */
+      -webkit-overflow-scrolling: touch;
+  }
+  
+  .menu-cont a.text {
+      white-space: nowrap;
+  }
+}
+
+.btnsearch {
+  background-color: #ffffff; /* ваш цвет */
+}
+
+
+/* Общие стили для иконок с плавной анимацией */
+.icon-hover {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+/* Увеличение при наведении */
+.icon-hover:hover {
+  transform: scale(1.15);
+}
+
+/* Для иконки телеграма - особый цвет при наведении */
+.telegram-icon:hover svg {
+  fill: #0088cc !important;
+}
+
+/* Для телефона - зеленый при наведении */
+.phone-icon:hover svg {
+  fill: #198754 !important;
+}
+
+/* Для избранного - красный при наведении */
+.heart-icon:hover svg {
+  fill: #dc3545 !important;
+}
+
+/* Для корзины - оранжевый при наведении */
+.cart-icon:hover svg {
+  fill: #fd7e14 !important;
+}
+
+/* Для пользователя - синий при наведении */
+.user-icon:hover svg {
+  fill: #0d6efd !important;
+}
+
+/* Для иконки поиска в поле */
+.search-icon:hover svg {
+  /* fill: #0d6efd !important; */
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+/* Эффект при наведении на все ссылки с иконками */
+.navbar .text:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Стиль для поля поиска при фокусе */
+.search-box:focus-within {
+  border-color: #86b7fe !important;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15) !important;
+}
