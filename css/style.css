@@ -1,178 +1,372 @@
-a.text:active, /* активная/посещенная ссылка */
-a.text:hover,  /* при наведении */
+/* ===== ОБЩИЕ СТИЛИ ===== */
+a.text:active,
+a.text:hover,
 a.text {
-
-  text-decoration: none;
-  color: #666;
+    text-decoration: none;
+    color: #666;
 }
 
-
-/* Расстояние между эллементами */
-/* .menu-cont {
-  gap: 5px;
-} */
-
+/* ===== НАВИГАЦИЯ ===== */
 .search-box {
-  margin-left: 30px;
-  margin-right: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 350px;
 }
 
-.catalog {
-  width: 992px;
-}
-.cart-card {
-  width: 200px;
-  font-size: medium;
-  margin: 10px;
-}
-
-.input-cart-count {
-  width: 150px !important;
-  margin-right: 20px;
-  padding-left: 10px;
-  font-size: 12px !important;
-/* padding-left: 20px !important; */
-}
-
-.input-cart-count-number {
-  padding-left: px !important;
-  text-align: center;
-}
-
-/* .logo_min {
+/* Логотипы */
+.logo_min {
     display: none;
-  } */
-
-/* Мобильная версия */
-@media (min-width: 992px) {
-
-  .logo_min {
-    display: none;
-  }
-
-} 
-
-@media (max-width: 992px) {
-
-  .menu-cont {
-  gap: 5px;
 }
 
-  .navbar-expand-lg .menu-cont {
-      flex-wrap: nowrap;
-      /* overflow-x: auto; */
-      -webkit-overflow-scrolling: touch;
-  }
-  .icon-hover{
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-  }
-  .navbar-brand {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  .logo {
-    display: none;
-  }
-  
-  .telegram-icon {
-    margin-left: 0 !important;
-    margin-right: 4px !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-
-  }
-
-  .search-box {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    /* width: 100px !important: */
-  }
-
-
-
-  .menu-cont a.text {
-      white-space: nowrap;
-  }
-
-  .catalog {
-  width: 500px;
-}
-
-.input-cart-count {
-  /* width: 100px !important; */
-  margin-right: 0px;
-  padding-left: 0px;
-/* padding-left: 20px !important; */
-}
-}
-
-.btnsearch {
-  background-color: #ffffff; /* ваш цвет */
-}
-
-
-/* Общие стили для иконок с плавной анимацией */
+/* Иконки навигации */
 .icon-hover {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  padding: 3px;
-  border-radius: 50%;
-  margin-left: 25px;
-  margin-right: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding: 3px;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 /* Увеличение при наведении */
 .icon-hover:hover {
-  transform: scale(1.15);
+    transform: scale(1.15);
 }
 
-/* Для иконки телеграма - особый цвет при наведении */
+/* Цвета иконок при наведении */
 .telegram-icon:hover svg {
-  fill: #0088cc !important;
+    fill: #0088cc !important;
 }
 
-/* Для телефона - зеленый при наведении */
 .phone-icon:hover svg {
-  fill: #198754 !important;
+    fill: #198754 !important;
 }
 
-/* Для избранного - красный при наведении */
 .heart-icon:hover svg {
-  fill: #dc3545 !important;
+    fill: #dc3545 !important;
 }
 
-/* Для корзины - оранжевый при наведении */
 .cart-icon:hover svg {
-  fill: #fd7e14 !important;
+    fill: #fd7e14 !important;
 }
 
-/* Для пользователя - синий при наведении */
 .user-icon:hover svg {
-  fill: #0d6efd !important;
+    fill: #0d6efd !important;
 }
 
-/* Для иконки поиска в поле */
 .search-icon:hover svg {
-  /* fill: #0d6efd !important; */
-  transform: scale(1.1);
-  transition: all 0.2s ease;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
 }
 
 /* Эффект при наведении на все ссылки с иконками */
 .navbar .text:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Стиль для поля поиска при фокусе */
 .search-box:focus-within {
-  border-color: #86b7fe !important;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15) !important;
+    border-color: #86b7fe !important;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15) !important;
+}
+
+/* ===== КАТАЛОГ (CSS GRID ВЕРСИЯ) ===== */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки на десктопе */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* Карточка товара */
+.cart-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.cart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Изображение карточки */
+.cart-card-img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+    background: #f8f9fa;
+}
+
+/* Тело карточки */
+.cart-card-body {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Заголовок и описание */
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+/* Цены */
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.text-muted {
+    font-size: 0.8rem;
+}
+
+/* ===== СЧЕТЧИК ТОВАРОВ ===== */
+.input-cart-count {
+    width: 130px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+}
+
+.input-cart-count button {
+    border: none;
+    background: #f8f9fa;
+    padding: 6px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    min-width: 40px;
+}
+
+.input-cart-count button:hover {
+    background: #e9ecef;
+}
+
+.input-cart-count input {
+    border: none;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    text-align: center;
+    font-weight: bold;
+    width: 50px;
+    padding: 6px 0;
+    background: white;
+}
+
+/* Убираем стрелочки у полей number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Кнопка "В корзину" */
+.cart-btn {
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    border-radius: 6px;
+}
+
+/* ===== МОБИЛЬНАЯ ВЕРСИЯ (до 992px) ===== */
+@media (max-width: 992px) {
+    /* Навигация */
+    .menu-cont {
+        gap: 5px;
+        padding: 0 10px;
+    }
+    
+    .navbar-expand-lg .menu-cont {
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .icon-hover {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        padding: 2px;
+    }
+    
+    .navbar-brand {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .logo {
+        display: none;
+    }
+    
+    .logo_min {
+        display: block !important;
+    }
+    
+    .telegram-icon {
+        margin-left: 0 !important;
+        margin-right: 4px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .search-box {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        width: 200px !important;
+    }
+    
+    .menu-cont a.text {
+        white-space: nowrap;
+    }
+    
+    /* Каталог - 2 колонки */
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 700px;
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+    
+    .cart-card-img {
+        height: 150px;
+    }
+    
+    .cart-card-body {
+        padding: 12px;
+    }
+    
+    .input-cart-count {
+        width: 120px;
+    }
+    
+    .cart-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== ПЛАНШЕТЫ (до 768px) ===== */
+@media (max-width: 768px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        max-width: 600px;
+    }
+    
+    .search-box {
+        width: 180px !important;
+    }
+    
+    .cart-card-img {
+        height: 140px;
+    }
+    
+    .input-cart-count {
+        width: 110px;
+    }
+    
+    .input-cart-count button {
+        padding: 5px 10px;
+        min-width: 35px;
+    }
+}
+
+/* ===== ТЕЛЕФОНЫ (до 576px) ===== */
+@media (max-width: 576px) {
+    /* Навигация - компактная */
+    .menu-cont {
+        justify-content: space-between;
+    }
+    
+    .search-box {
+        width: 150px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+    
+    .icon-hover {
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+    }
+    
+    /* Каталог - 1 колонка */
+    .catalog-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        max-width: 400px;
+        padding: 0 15px;
+    }
+    
+    .cart-card-img {
+        height: 180px;
+    }
+    
+    .cart-card-body {
+        padding: 15px;
+    }
+    
+    .input-cart-count {
+        width: 130px;
+    }
+    
+    /* Счетчик + кнопка в колонку на очень маленьких */
+    @media (max-width: 400px) {
+        .cart-card-body > div:last-child {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .input-cart-count {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .cart-btn {
+            width: 100%;
+        }
+    }
+}
+
+/* ===== ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 400px) ===== */
+@media (max-width: 400px) {
+    .search-box {
+        width: 130px !important;
+    }
+    
+    .catalog-grid {
+        padding: 0 10px;
+    }
+    
+    .cart-card-img {
+        height: 160px;
+    }
 }
