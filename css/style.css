@@ -304,29 +304,39 @@ input[type="number"] {
 @media (max-width: 576px) {
     /* Навигация - компактная */
     .menu-cont {
-        width: 100%;
+        justify-content: center;
+        width: 95%;
     }
     
     .search-box {
         width: auto !important;
-        padding-left: 8px !important;
-        padding-right: 8px !important;
+        /* padding-left: 8px !important;
+        padding-right: 8px !important; */
         margin: 0 !important;
+    }
+
+    .icon-groop {
+        margin-right: 15px;
     }
     
     .icon-hover {
         margin-left: 2px !important;
     }
 
-    .navbar-brand {
+    /* .navbar-brand {
         margin-left: 10px !important;
-    }
+    } */
 
     .telegram-icon {
         margin-left: 0 !important;
         margin-right: 0 !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
+    }
+
+    .navbar-brand {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
     }
 
 
@@ -337,14 +347,18 @@ input[type="number"] {
     
     /* Каталог - 1 колонка */
     .catalog-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr)
         gap: 15px;
-        max-width: 400px;
+        max-width: 500px;
         padding: 0 15px;
     }
-    
+
+    /* .cart-card {
+        width: 200px;
+    }
+     */
     .cart-card-img {
-        height: 180px;
+        height: 150px;
     }
     
     .cart-card-body {
